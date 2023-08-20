@@ -1,4 +1,4 @@
-FROM ruby:3.2.0-slim-bullseye
+FROM ruby:3.2.2-slim-bullseye
 
 WORKDIR /app
 
