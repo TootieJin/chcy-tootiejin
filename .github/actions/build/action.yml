@@ -55,8 +55,8 @@ runs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/chart_cyanvas/${{ inputs.directory-name }}:${{ env.CURRENT_DATETIME }}
-          ghcr.io/${{ github.repository_owner }}/chart_cyanvas/${{ inputs.directory-name }}:latest
+          ghcr.io/tootiejin/chcy-tootiejin/${{ inputs.directory-name }}:${{ env.CURRENT_DATETIME }}
+          ghcr.io/tootiejin/chcy-tootiejin/${{ inputs.directory-name }}:latest
         cache-from: type=local,src=/tmp/.buildx-cache
         cache-to: type=local,dest=/tmp/.buildx-cache-new
         ulimit: nofile=1024000:1024000
