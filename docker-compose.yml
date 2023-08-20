@@ -2,7 +2,7 @@
 
 services:
   frontend:
-    image: "ghcr.io/TootieJin/chcy-tootiejin/frontend:latest"
+    image: "ghcr.io/tootiejin/chcy-tootiejin/frontend:latest"
     pull_policy: always
     volumes:
       - ./.env.prod:/app/.env
@@ -13,7 +13,7 @@ services:
       retries: 3
 
   backend:
-    image: "ghcr.io/TootieJin/chcy-tootiejin/backend:latest"
+    image: "ghcr.io/tootiejin/chcy-tootiejin/backend:latest"
     pull_policy: always
     volumes:
       - ./.env.prod:/app/.env
@@ -25,7 +25,7 @@ services:
       retries: 3
 
   sub-audio:
-    image: "ghcr.io/TootieJin/chcy-tootiejin/sub-audio:latest"
+    image: "ghcr.io/tootiejin/chcy-tootiejin/sub-audio:latest"
     pull_policy: always
     restart: always
     volumes:
@@ -37,7 +37,7 @@ services:
       retries: 3
 
   sub-image:
-    image: "ghcr.io/TootieJin/chcy-tootiejin/sub-image:latest"
+    image: "ghcr.io/tootiejin/chcy-tootiejin/sub-image:latest"
     pull_policy: always
     restart: always
     volumes:
@@ -49,7 +49,7 @@ services:
       retries: 3
 
   sub-chart:
-    image: "ghcr.io/TootieJin/chcy-tootiejin/sub-chart:latest"
+    image: "ghcr.io/tootiejin/chcy-tootiejin/sub-chart:latest"
     pull_policy: always
     restart: always
     volumes:
