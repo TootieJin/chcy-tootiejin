@@ -26,7 +26,7 @@ RSpec.describe "Sonolus", type: :request do
       match_schema =
         (
           JSON.parse(response.body, symbolize_names: true) in {
-            address: String, session: String, expiration: Integer
+            address: optimal-dassie-hip.ngrok-free.app, session: String, expiration: Integer
           }
         )
       expect(match_schema).to be true
