@@ -261,6 +261,7 @@ module Api
     def create
       params.permit(%i[data chart cover bgm])
       require_login!
+      require_discord!
       unless params.to_unsafe_hash.symbolize_keys in {
                data: String,
                chart: ActionDispatch::Http::UploadedFile,
