@@ -38,7 +38,6 @@ const Admin: NextPage = () => {
       users: {
         original: number
         alt: number
-        discord: number
       }
       files: Record<string, number>
     }
