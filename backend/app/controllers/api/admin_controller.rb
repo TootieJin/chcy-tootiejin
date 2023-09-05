@@ -14,7 +14,6 @@ module Api
                    users: {
                      original: User.where(owner_id: nil).count,
                      alt: User.where.not(owner_id: nil).count,
-                     discord: User.where.not(discord_id: nil).count
                    },
                    files:
                      FileResource.all.group_by(&:kind).transform_values(&:count)
