@@ -48,7 +48,6 @@ type Session =
       loggedIn: true
       user: User
       altUsers: User[]
-      discord: DiscordInfo | undefined
     }
   | { loggedIn: false }
   | { loggedIn: undefined }
