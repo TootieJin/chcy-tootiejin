@@ -26,12 +26,9 @@ function App({ Component, pageProps }: AppProps) {
     }).then(async (res) => {
       const json = await res.json()
       if (json.code === "ok") {
-        const [altUsers, discordUser] = await Promise.all([
+        const [altUsers] = await Promise.all([
           fetch(`/api/my/alt_users`).then(
             async (res) => (await res.json()).users
-          ),
-          fetch(`/api/my/discord`).then(
-            async (res) => (await res.json()).discord
           ),
         ])
 
@@ -39,7 +36,6 @@ function App({ Component, pageProps }: AppProps) {
           loggedIn: true,
           user: json.user,
           altUsers,
-          discord: discordUser,
         })
       } else {
         setSession({ loggedIn: false })

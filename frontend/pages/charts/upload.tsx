@@ -718,7 +718,7 @@ const UploadChart: NextPage<
       onDragOver={(e) => e.preventDefault()}
       onDrop={onDrop}
     >
-      <fieldset disabled={isSubmitting || !session.discord}>
+      <fieldset disabled={isSubmitting}>
         <Head>
           <title>{t("title") + " | " + rootT("name")}</title>
         </Head>
