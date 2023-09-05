@@ -39,12 +39,6 @@ class User < ApplicationRecord
     discord_status == "joined"
   end
 
-  def discord
-    return unless discord_token
-    refresh_discord_token if discord_expires_at < Time.now
-    @discord ||= DiscordRequest.new(bearer_token: discord_token)
-  end
-
   def check_discord
     return false unless discord_token
     refresh_discord_token if discord_expires_at < Time.now
