@@ -892,29 +892,6 @@ const UploadChart: NextPage<
               />,
             ]}
           />
-          <br />
-          <br />
-          {t("discordInfo.description")}
-          <br />
-          {t("discordInfo.status.label")}
-          {session.discord ? (
-            <>
-              {t("discordInfo.status.connected", {
-                username: session.discord.username,
-              })}
-            </>
-          ) : (
-            <>{t("discordInfo.status.notConnected")}</>
-          )}
-          <Link
-            href={`https://cc-wiki.sevenc7c.com/${
-              router.locale || "en"
-            }/publishing-chart`}
-            target="_blank"
-            className="ml-2"
-          >
-            {t("discordInfo.connectGuide")}
-          </Link>
         </p>
         <div className="relative">
           {!session.discord && (
